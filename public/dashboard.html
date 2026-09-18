@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamSaathi - Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+<div class="bg-glow"></div>
+
+<div class="top-bar">
+  <div>
+    <p class="greet">Namaste,</p>
+    <h2 id="userName">Student</h2>
+  </div>
+  <div class="avatar-circle" onclick="window.location.href='profile.html'">👤</div>
+</div>
+
+<div class="page-content">
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <p class="stat-num" id="totalTests">0</p>
+      <p class="stat-label">Tests Given</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-num" id="avgScore">0%</p>
+      <p class="stat-label">Avg Score</p>
+    </div>
+  </div>
+
+  <h3 class="section-title">Subjects</h3>
+  <div class="subject-grid" id="subjectGrid"></div>
+
+  <h3 class="section-title">Recent Results</h3>
+  <div id="recentResults" class="recent-list">
+    <p class="empty-msg">Koi test abhi tak nahi diya</p>
+  </div>
+
+</div>
+
+<div class="bottom-nav">
+  <div class="nav-item active" onclick="window.location.href='dashboard.html'">🏠<span>Home</span></div>
+  <div class="nav-item" onclick="window.location.href='results.html'">📊<span>Results</span></div>
+  <div class="nav-item" onclick="window.location.href='profile.html'">⚙️<span>Profile</span></div>
+</div>
+
+<script src="app.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

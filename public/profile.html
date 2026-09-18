@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamSaathi - Profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+<div class="bg-glow"></div>
+
+<div class="top-bar">
+  <h2>Profile</h2>
+</div>
+
+<div class="page-content">
+  <div class="glass-card profile-card">
+    <div class="avatar-circle-lg">👤</div>
+    <h2 id="pName">Student</h2>
+    <p id="pEmail" class="tagline"></p>
+    <p id="pClass" class="tagline"></p>
+  </div>
+
+  <button class="primary-btn logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<div class="bottom-nav">
+  <div class="nav-item" onclick="window.location.href='dashboard.html'">🏠<span>Home</span></div>
+  <div class="nav-item" onclick="window.location.href='results.html'">📊<span>Results</span></div>
+  <div class="nav-item active" onclick="window.location.href='profile.html'">⚙️<span>Profile</span></div>
+</div>
+
+<script src="app.js"></script>
+<script src="profile.js"></script>
+</body>
+</html>

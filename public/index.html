@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamSaathi</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e27"></head>
+<body>
+
+<div class="bg-glow"></div>
+
+<div class="login-container">
+  <div class="logo-area">
+    <div class="logo-circle">ES</div>
+    <h1>ExamSaathi</h1>
+    <p class="tagline">UP Board Class 10th & 12th Prep</p>
+  </div>
+
+  <div class="glass-card">
+    <div class="tab-switch">
+      <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">Login</button>
+      <button class="tab-btn" id="signupTab" onclick="switchTab('signup')">Sign Up</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" class="auth-form">
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit" class="primary-btn">Login</button>
+      <p id="loginMsg" class="msg"></p>
+    </form>
+
+    <!-- SIGNUP FORM -->
+    <form id="signupForm" class="auth-form hidden">
+      <input type="text" id="signupName" placeholder="Full Name" required>
+      <input type="tel" id="signupPhone" placeholder="Phone Number" required pattern="[0-9]{10}">
+      <select id="signupClass" required>
+        <option value="">Select Class</option>
+        <option value="10">Class 10th</option>
+        <option value="12">Class 12th</option>
+      </select>
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password (min 6 chars)" required minlength="6">
+      <button type="submit" class="primary-btn">Create Account</button>
+      <p id="signupMsg" class="msg"></p>
+    </form>
+
+    <div class="divider"><span>OR</span></div>
+
+    <button class="google-btn" onclick="googleSignIn()">
+      <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.6-6 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l6-6C34 5.1 29.3 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21c0-1.4-.1-2.5-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.5 16 18.9 13 24 13c3.1 0 5.8 1.1 8 3l6-6C34 5.1 29.3 3 24 3 16 3 9 7.6 6.3 14.7z"/><path fill="#4CAF50" d="M24 45c5.2 0 9.9-2 13.4-5.2l-6.2-5.2c-2 1.4-4.6 2.3-7.2 2.3-5.3 0-9.7-3.4-11.3-8l-6.5 5C9 40.3 16 45 24 45z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2C40.6 36 44 30.5 44 24c0-1.4-.1-2.5-.4-3.5z"/></svg>
+      Continue with Google
+    </button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
