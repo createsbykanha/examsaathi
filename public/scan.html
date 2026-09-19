@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamSaathi - Scan & Generate</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+<div class="bg-glow"></div>
+
+<div class="top-bar">
+  <h2>Scan & Generate</h2>
+</div>
+
+<div class="page-content">
+  <div class="glass-card" style="text-align:center;">
+    <p style="color:#94a3b8;font-size:13px;margin-bottom:16px;">
+      Kisi bhi chapter/topic ka page photo lo — AI usse 20+ questions bana dega
+    </p>
+
+    <input type="file" id="photoInput" accept="image/*" capture="environment" style="display:none;">
+    <button class="primary-btn" onclick="document.getElementById('photoInput').click()">📷 Photo Choose Karo</button>
+
+    <div id="previewBox" style="margin-top:16px;"></div>
+
+    <button class="primary-btn" id="generateBtn" style="display:none;margin-top:16px;" onclick="generateQuestions()">
+      ✨ Generate Questions
+    </button>
+
+    <p id="statusMsg" class="msg"></p>
+  </div>
+
+  <div id="resultBox"></div>
+</div>
+
+<div class="bottom-nav">
+  <div class="nav-item" onclick="window.location.href='dashboard.html'">🏠<span>Home</span></div>
+  <div class="nav-item active" onclick="window.location.href='scan.html'">📷<span>Scan</span></div>
+  <div class="nav-item" onclick="window.location.href='results.html'">📊<span>Results</span></div>
+</div>
+
+<script src="app.js"></script>
+<script src="scan.js"></script>
+</body>
+</html>

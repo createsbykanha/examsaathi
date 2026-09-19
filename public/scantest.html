@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExamSaathi - Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+<div class="bg-glow"></div>
+
+<div class="top-bar">
+  <h2 id="testTitle">Test</h2>
+  <button class="secondary-btn" style="padding:8px 14px;" onclick="toggleLang()" id="langBtn">EN</button>
+</div>
+
+<div class="page-content">
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <p class="q-counter" id="qCounter"></p>
+
+  <div class="glass-card question-card">
+    <p id="questionText" class="question-text"></p>
+    <div id="optionsBox" class="options-box"></div>
+  </div>
+
+  <div class="test-nav-btns">
+    <button class="secondary-btn" onclick="prevQ()">Previous</button>
+    <button class="primary-btn" id="nextBtn" onclick="nextQ()">Next</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="scantest.js"></script>
+</body>
+</html>
